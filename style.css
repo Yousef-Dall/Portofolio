@@ -254,7 +254,7 @@ header .container nav ul a:hover {
 .landing .container .intro-txt h1 p {
   font-size: 36px;
   /* background-color: rgb(111, 16, 16); */
-  width: 500px;
+  width: 100%;
   height: 100px;
   /* color: white; */
   text-align: center;
