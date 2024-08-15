@@ -39,23 +39,26 @@ let sectionBot = document.querySelector("footer");
 let spanProg = document.querySelectorAll(
   ".skills .skills-stat .prog-holder .prog span"
 );
+console.log(scrollY);
 
-// function skills() {
-//   if (
-//     window.scrollY >= sectionTop.offsetTop - 100 &&
-//     window.scrollY <= sectionBot.offsetTop - 200
-//   ) {
-//     spanProg.forEach((span) => {
-//       span.style.width = span.dataset.width;
-//     });
-//   } else {
-//     spanProg.forEach((span) => {
-//       span.style.width = 0;
-//     });
-//   }
-// }
+            
+let widths =  [ "90%","80%","50%","86%","60%" ," 100%"," 70%"]
 
-window.addEventListener("scroll", skills);
+
+
+function skills() {
+  if (window.scrollY >= sectionTop.offsetTop - 400) {
+    spanProg.forEach((span,index) => {
+    span.style.width = widths[index];
+    });
+  } else {
+    spanProg.forEach((span) => {
+      span.style.width = 0;
+    });
+  }
+}
+
+window.addEventListener("scroll", ()=>skills());
 // skills end
 
 var vids = document.getElementsByTagName("video");
